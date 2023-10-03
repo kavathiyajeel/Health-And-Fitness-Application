@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".Health_Calculator.Basal_Metabolic_Rate">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/lblack"
+        app:cardCornerRadius="10dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        app:cardElevation="10dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bmr_calculator"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bmr_radiogroup"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/bmr_male"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/green"
+                    android:checked="true"
+                    android:padding="10dp"
+                    android:text="@string/male"
+                    android:textColor="@color/white"
+                    app:useMaterialThemeColors="true" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bmr_female"
+                    android:text="@string/female"
+                    android:padding="10dp"
+                    android:buttonTint="@color/green"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"/>
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bmr_age_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:hintTextColor="@color/green"
+                app:counterTextColor="@color/green"
+                app:boxStrokeColor="@color/green"
+                android:textColorHint="@color/white"
+                app:boxStrokeErrorColor="@color/error"
+                app:errorTextColor="@color/error"
+                app:errorTextAppearance="@color/error"
+                app:errorIconTint="@color/error"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="@string/enter_your_age"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bmr_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/white"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bmr_height_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:hintTextColor="@color/green"
+                app:counterTextColor="@color/green"
+                app:boxStrokeColor="@color/green"
+                android:textColorHint="@color/white"
+                app:boxStrokeErrorColor="@color/error"
+                app:errorTextColor="@color/error"
+                app:errorTextAppearance="@color/error"
+                app:errorIconTint="@color/error"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="@string/enter_your_height_ft">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bmr_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/bmr_weight_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                app:hintTextColor="@color/green"
+                app:counterTextColor="@color/green"
+                app:boxStrokeColor="@color/green"
+                android:textColorHint="@color/white"
+                app:boxStrokeErrorColor="@color/error"
+                app:errorTextColor="@color/error"
+                app:errorTextAppearance="@color/error"
+                app:errorIconTint="@color/error"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="@string/enter_your_weight_kg"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bmr_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/white"
+                    android:textCursorDrawable="@drawable/cursor_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_bmr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/green"
+                android:fontFamily="sans-serif-black"
+                android:padding="15dp"
+                android:text="@string/calculate_basal_metabolic_rate"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:cornerRadius="30dp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

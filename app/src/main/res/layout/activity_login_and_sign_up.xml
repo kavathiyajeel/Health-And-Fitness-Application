@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".Login_And_SignUp.Login_And_SignUp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="10dp"
+        app:shapeAppearance="@style/circle"
+        app:srcCompat="@drawable/ic_icon" />
+
+    <TextView
+        android:id="@+id/txt_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="@string/your_body_can_stand_almost_anything"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_1"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="@string/it_s_your_mind_that_you_have_to_convince"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_mobileno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_google"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:padding="15dp"
+        android:text="@string/continue_with_phone_number"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:cornerRadius="30dp"
+        app:icon="@drawable/ic_mobile"
+        app:iconTint="@color/white"
+        app:strokeColor="@color/green"
+        app:strokeWidth="3dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="sans-serif-black"
+        android:padding="15dp"
+        android:text="@string/continue_with_google"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:cornerRadius="30dp"
+        app:icon="@drawable/ic_google"
+        app:iconTint="@color/white"
+        app:strokeColor="@color/green"
+        app:strokeWidth="3dp" />
+
+</RelativeLayout>

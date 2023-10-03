@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/step_counter_frag"
+        android:icon="@drawable/ic_step"
+        android:title="Step"/>
+
+
+    <item
+        android:id="@+id/step_status_frag"
+        android:icon="@drawable/ic_status"
+        android:title="status"/>
+
+    <item
+        android:id="@+id/step_settings_frag"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings"/>
+</menu>

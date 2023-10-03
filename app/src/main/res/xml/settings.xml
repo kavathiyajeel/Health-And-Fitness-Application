@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+     <PreferenceCategory app:title="Goals Steps"
+            android:layout="@layout/custom_preference">
+
+            <EditTextPreference
+                app:defaultValue="10000"
+                app:key="daily_goal"
+                app:title="Daily goal"
+                android:layout="@layout/custom_preference1"/>
+
+        </PreferenceCategory>
+
+        <PreferenceCategory app:title="Advanced"
+            app:layout="@layout/custom_preference">
+
+            <EditTextPreference
+                app:defaultValue="67"
+                app:key="step_length"
+                app:title="Step length"
+                android:layout="@layout/custom_preference1"/>
+            <EditTextPreference
+                app:defaultValue="182"
+                app:key="height"
+                app:title="Height"
+                android:layout="@layout/custom_preference1"/>
+            <EditTextPreference
+                app:defaultValue="60"
+                app:key="weight"
+                app:title="Weight"
+                android:layout="@layout/custom_preference1"/>
+
+            <ListPreference
+                android:defaultValue="1"
+                app:entries="@array/pace_entries"
+                app:entryValues="@array/pace_values"
+                app:key="pace"
+                app:title="Pace"
+                android:layout="@layout/custom_preference1"/>
+        </PreferenceCategory>
+
+</PreferenceScreen>

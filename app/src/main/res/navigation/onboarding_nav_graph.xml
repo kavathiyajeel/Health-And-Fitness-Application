@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_nav_graph"
+    app:startDestination="@id/RecognitionPermissionFragment">
+
+    <fragment
+        android:id="@+id/RecognitionPermissionFragment"
+        android:name="com.example.health_and_fitness.Step_Counter.Fragments.RecognitionPermission_Frag"
+        android:label="fragment_recognition_permission"
+        tools:layout="@layout/fragment_recognition_permission">
+        <action
+            android:id="@+id/action_RecognitionPermissionFragment_to_stepcounterActivity"
+            app:destination="@+id/step_counter" />
+
+    </fragment>
+    <activity
+        android:id="@+id/step_counter"
+        android:name="com.example.health_and_fitness.Activitys.Step_Counter"
+        android:label="activity_step_counter"
+        tools:layout="@layout/activity_step_counter"/>
+
+</navigation>

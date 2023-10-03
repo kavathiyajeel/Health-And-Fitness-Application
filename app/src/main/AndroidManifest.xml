@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".Step_Counter.StepCounterApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_icon_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Health_And_Fitness"
+        tools:targetApi="31">
+        <activity
+            android:name=".Water_Remainder.Activitys.InitUserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Water_Remainder.Activity.InitUserInfoActivity"
+            android:exported="false" />
+
+        <receiver android:name=".Medicine_Remainder.AlarmReceiver" />
+        <receiver
+            android:name=".Medicine_Remainder.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Medicine_Remainder.Activitys.Edit_Medicine"
+            android:exported="false" />
+        <activity
+            android:name=".Activitys.Water_Remainder"
+            android:exported="false" />
+        <activity
+            android:name=".Medicine_Remainder.Activitys.Add_Medicine"
+            android:exported="false" />
+        <activity
+            android:name=".Activitys.Medicine_Remainder"
+            android:exported="false" />
+
+        <service android:name=".Step_Counter.Service.StepCounterService" />
+
+        <receiver
+            android:name=".Step_Counter.Service.StepCounterServiceLauncher"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Health_Calculator.Cholestrol_Ratio"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Childrens_Height"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Calories_Burn_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Calorie_Burn"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Bruce_Trade_Mill"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Body_Surface_Area"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Body_Mass_Index"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Body_Mass_Index_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Body_Frame_Size"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Body_Fat"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Body_Fat_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Body_Adiposity_Index"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Body_Adiposity_Index_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Blood_Volume"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Blood_Suger"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Blood_Suger_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Blood_Preeure"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Blood_Preeure_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Blood_Alchool_Content"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Blood_Alchool_Content_Chart"
+            android:exported="false" />
+        <activity
+            android:name=".Health_Calculator.Basal_Metabolic_Rate"
+            android:exported="false" />
+        <activity
+            android:name=".Step_Counter.Activitys.Permission_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Step_Counter.Activitys.Onboarding_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Activitys.Step_Counter"
+            android:exported="false" />
+        <activity
+            android:name=".Activitys.Health_Calculator"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Login_And_SignUp.Mobile_Number_OTP"
+            android:exported="false" />
+        <activity
+            android:name=".Login_And_SignUp.Mobile_Number"
+            android:exported="false" />
+        <activity
+            android:name=".Login_And_SignUp.Login_And_SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

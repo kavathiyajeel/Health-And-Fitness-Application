@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lblack"
+    tools:context=".Water_Remainder.Fragment.Bottomsheet_dialog_water_remainder">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bs_wr_weight_field"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/enter_your_weight_kg"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeErrorColor="@color/error"
+        app:counterTextColor="@color/green"
+        app:errorIconTint="@color/error"
+        app:errorTextAppearance="@color/error"
+        app:errorTextColor="@color/error"
+        app:hintTextColor="@color/green">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bs_wr_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/cursor_color" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bs_wr_workout_field"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bs_wr_weight_field"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/your_daily_work_out_time_in_min_day"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeErrorColor="@color/error"
+        app:counterTextColor="@color/green"
+        app:errorIconTint="@color/error"
+        app:errorTextAppearance="@color/error"
+        app:errorTextColor="@color/error"
+        app:hintTextColor="@color/green">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bs_wr_workout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/cursor_color" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bs_wr_wakeuptime_field"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bs_wr_workout_field"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/your_wake_up_time"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeErrorColor="@color/error"
+        app:counterTextColor="@color/green"
+        app:errorIconTint="@color/error"
+        app:errorTextAppearance="@color/error"
+        app:errorTextColor="@color/error"
+        app:hintTextColor="@color/green">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bs_wr_wakeuptime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/cursor_color" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bs_wr_sleeptime_field"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bs_wr_wakeuptime_field"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/your_sleep_time"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeErrorColor="@color/error"
+        app:counterTextColor="@color/green"
+        app:errorIconTint="@color/error"
+        app:errorTextAppearance="@color/error"
+        app:errorTextColor="@color/error"
+        app:hintTextColor="@color/green">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bs_wr_sleeptime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/cursor_color" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bs_wr_target_field"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bs_wr_sleeptime_field"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/enter_your_custom_intake_target_in_ml"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeErrorColor="@color/error"
+        app:counterTextColor="@color/green"
+        app:errorIconTint="@color/error"
+        app:errorTextAppearance="@color/error"
+        app:errorTextColor="@color/error"
+        app:hintTextColor="@color/green">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bs_wr_target"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/cursor_color" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notification Settings"
+        android:layout_below="@+id/bs_wr_target_field"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bs_wr_notifications_message_field"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt1"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:hint="@string/notification_message"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeErrorColor="@color/error"
+        app:counterTextColor="@color/green"
+        app:errorIconTint="@color/error"
+        app:errorTextAppearance="@color/error"
+        app:errorTextColor="@color/error"
+        app:hintTextColor="@color/green">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bs_wr_notifications_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/cursor_color" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bs_wr_notification_tone_field"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bs_wr_notifications_message_field"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="@string/notification_tone"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeErrorColor="@color/error"
+        app:counterTextColor="@color/green"
+        app:errorIconTint="@color/error"
+        app:errorTextAppearance="@color/error"
+        app:errorTextColor="@color/error"
+        app:hintTextColor="@color/green">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/bs_wr_notification_tone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textCursorDrawable="@drawable/cursor_color" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/bs_wr_timeradiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bs_wr_notification_tone_field"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/bs_wr_30timeradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/green"
+            android:checked="true"
+            android:padding="10dp"
+            android:text="@string/_30_mins"
+            android:textColor="@color/white"
+            app:useMaterialThemeColors="true" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/bs_wr_45timeradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_45_mins"
+            android:padding="10dp"
+            android:buttonTint="@color/green"
+            android:textColor="@color/white"
+            android:layout_weight="1"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/bs_wr_60timeradio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_60_mins"
+            android:padding="10dp"
+            android:buttonTint="@color/green"
+            android:textColor="@color/white"
+            android:layout_weight="1"/>
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_bs_wr_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bs_wr_timeradiogroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="sans-serif-black"
+        android:padding="15dp"
+        android:text="@string/continue1"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:cornerRadius="30dp" />
+
+
+</RelativeLayout>
